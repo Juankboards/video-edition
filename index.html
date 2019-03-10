@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multimedi manipulation</title>
+</head>
+<body>
+    <video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous">
+        <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm">
+        <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4">
+      </video>
+      <canvas id="my-canvas" width="480" height="270"></canvas>
+      <div class="controls">
+        <p>Brightness: <i id="brightness-value">0</i></p>
+        <input oninput="brightnessChange(event)" name="brightness" type="range" min="-255" max="255" value="0">
+        <p>Contrast: <i id="contrast-value">0</i></p>
+        <input oninput="contrastChange(event)" name="contrast" type="range" min="-255" max="255" value="0"> <br />  
+        <input onchange="invertChange(event)" name="invert" type="checkbox" min="-255" max="255" value="1"> Invert   
+        <input onchange="verticalChange(event)" name="invert" type="checkbox" min="-255" max="255" value="1"> Vertical Mirror   
+        <input onchange="horizontalChange(event)" name="invert" type="checkbox" min="-255" max="255" value="1"> Horizontal Mirror   
+        
+      </div> 
+</body>
+<script src="main.js"></script>
+</html>
